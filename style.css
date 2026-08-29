@@ -422,7 +422,7 @@ footer .line-footer p a{
 }
 
 /* Estilo Responsivo */
-@media screen and (max-width: 5000px){
+@media screen and (max-width: 1040px){
 
     /* Estilo Geral da Página */
     .flex{
