@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="pedro"/>
+		<title> Agenda Telefonica </title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Outfit', sans-serif;
+		}
+
+		body{
+			height: 100vh;
+		}
+
+		nav.menu-lateral{
+			width: 80px;
+			height: 100%;
+			background-color: black;
+			padding: 40px 0 40px 1%;
+			box-shadow: 3px 0 0 #0040FF;
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			transition: .5s;
+		}
+
+		nav.menu-lateral.expandir{
+			width: 300px;
+		}
+
+		.btn-expandir{
+			width: 100%;
+			padding-left: 10px;
+			margin-bottom: 20px; /* espaço abaixo do botão */
+		}
+
+		.btn-expandir > i{
+			color: #fff;
+			font-size: 30px;
+			cursor: pointer;
+		}
+
+		ul{
+			height: 100%;
+			list-style-type: none;
+		}
+
+		ul li.item-menu{
+			transform: .2s;
+		}
+
+		ul li.ativo{
+			background-color: #0040FF;
+		}
+
+		ul li.item-menu:hover{
+			background: #0040FF;
+		}
+
+		ul li.item-menu a{
+			color: #fff;
+			text-decoration: none;
+			font-size: 20px;
+			padding: 20px 4%;
+			display: flex;
+			margin-bottom: 1px;
+			line-height: 30px;
+		}
+
+		ul li.item-menu a .txt-link{
+			margin-left: 0px;
+			transition: .5s;
+			opacity: 0;
+		}
+
+		nav.menu-lateral.expandir .txt-link{
+			margin-left: 40px;
+			opacity: 1;
+		}
+
+		ul li.item-menu a .icon > i{
+			font-size: 25px;
+			margin-left: 10px;
+		}
+
+		header{
+			background-color: black;
+			color: #fff;
+			padding: 15px;
+		}
+
+        /* Estilos para a tabela */
+		table {
+			border: solid 1px;
+			width: 80%; /* Diminui a largura da tabela para que ela não ocupe toda a tela */
+			margin: 20px auto; /* Centraliza a tabela e adiciona espaçamento */
+			color: #4F4F4F;
+		}
+
+        td {
+            text-align: center;
+            width: 30%;
+            color: black;
+            border: solid 0px;
+            background-color: white;
+        }
+
+        th {
+            text-align: center;
+            color: white;
+            border: solid 1px;
+            background-color: black;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px); /* Ajusta altura levando em conta o footer */
+            padding: 20px 0 80px; /* Deixa um espaço extra embaixo para não encostar no footer */
+            margin-left: 80px; /* Compensa o menu lateral fixo */
+            transition: margin-left 0.5s;
+        }
+
+        nav.menu-lateral.expandir ~ main {
+            margin-left: 300px; /* Ajuste se o menu expandir */
+        }
+	</style>
+	<body>
+
+        <nav class="menu-lateral"> <!--Menu Lateral-->
+			
+            <div class="btn-expandir"> <!--btn expandir-->
+				<i class="bi bi-chevron-double-right" id="btn-exp"></i>
+			</div>
+
+			<ul>
+				<li class="item-menu">
+					<a href="Agenda Telefonica.html">
+						<span class="icon"><i class="bi bi-house"></i></span>
+						<span class="txt-link">Home</span>
+					</a>
+				</li>
+				<li class="item-menu ativo">
+					<a href="Automoveis.html">
+						<span class="icon"><i class="bi bi-car-front"></i></i></span>
+						<span class="txt-link">Automóveis</span>
+					</a>
+				</li>
+				<li class="item-menu">
+					<a href="Caminhoes.html">
+						<span class="icon"><i class="bi bi-truck"></i></i></span>
+						<span class="txt-link">Caminhões</span>
+					</a>
+				</li>
+				<li class="item-menu">
+					<a href="Outros.html">
+						<span class="icon"><i class="bi bi-telephone"></i></i></span>
+						<span class="txt-link">Outros</span>
+					</a>
+				</li>
+			</ul>
+
+        </nav>
+
+		<script src="Menu JavaScript.js"></script>
+
+		<header>
+			<h1 align="right">Automóveis</h1>
+		</header>
+
+        <main>
+            <table>
+                <tr>
+                    <th> CÓDIGO </th>
+                    <th> EMPRESA </th>
+                    <th> FONE </th>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> HARLEY DAVIDSON SOROCABA </td>
+                    <td> (15) 3333-1888 </td>
+                </tr>
+                <tr>
+                    <td> 10 </td>
+                    <td> JAGUAR LAND ROVER SOROCABA </td>
+                    <td> (15) 3141-8040 </td>
+                </tr>
+                <tr>
+                    <td> 20 </td>
+                    <td> MAGGI VOLVO SOROCABA </td>
+                    <td> (15) 3141-9850 </td>
+                </tr>
+                <tr>
+                    <td> 21 </td>
+                    <td> MAGGI VOLVO - PIRACICABA</td>
+                    <td> - </td>
+                </tr>
+                <tr>
+                    <td> 30 </td>
+                    <td> MAGGI AVANTE - MATRIZ (LOJA) </td>
+                    <td> 5332-0044 </td>
+                </tr>
+                <tr>
+                    <td> 40 </td>
+                    <td> MAGGI AVANTE - FILIAL (OFICINA) </td>
+                    <td> 5332-0050 </td>
+                </tr>
+                <tr>
+                    <td> 41 </td>
+                    <td> MAGGI AVANTE - ITAPETININGA </td>
+                    <td> (15) 3499-4194 </td>
+                </tr>
+                <tr>
+                    <td> 50 </td>
+                    <td> MAGGI TOYOTA ITU </td>
+                    <td> (11) 4022-5000 </td>
+                </tr>
+                <tr>
+                    <td> 51 </td>
+                    <td> MAGGI TOYOTA INDAIATUBA </td>
+                    <td> (19) 3825-7000 </td>
+                </tr>
+                <tr>
+                    <td> 52 </td>
+                    <td> MAGGI TOYOTA AMERICANA </td>
+                    <td> (19) 3475-9100 </td>
+                </tr>
+                <tr>
+                    <td> 53 </td>
+                    <td> MAGGI TOYOTA PIRASSUNUNGA </td>
+                    <td> (19) 3565-5800 </td>
+                </tr>
+                <tr>
+                    <td> 55 </td>
+                    <td> MAGGI TOYOTA REGISTRO </td>
+                    <td> (13) 3828-0000 </td>
+                </tr>
+                <tr>
+                    <td> 60 </td>
+                    <td> MAGGI VOLKS ITU </td>
+                    <td> (11) 4013-8100 </td>
+                </tr>
+                <tr>
+                    <td> 64 </td>
+                    <td> MAGGI VOLKS TIETE </td>
+                    <td> (15) 3285-9000 </td>
+                </tr>
+                <tr>
+                    <td> 70 </td>
+                    <td> MAGGI POWER SPORTS </td>
+                    <td> (15) 3141-9400 </td>
+                </tr>
+                <tr>
+                    <td> 71 </td>
+                    <td> MAGGI POWER SPORTS - FILIAL </td>
+                    <td> - </td>
+                </tr>
+                <tr>
+                    <td> 72 </td>
+                    <td> MAGGI POWER SPORTS ALPHAVILLE </td>
+                    <td> (11) 3546-8213 </td>
+                </tr>
+                <tr>
+                    <td> 110 </td>
+                    <td> MAGGI FIAT </td>
+                    <td> (11) 4013-8300 </td>
+                </tr>
+                <tr>
+                    <td> 111 </td>
+                    <td> MAGGI TIETE </td>
+                    <td> (15) 3285-5510 </td>
+                </tr>
+                <tr>
+                    <td> 201 </td>
+                    <td> MULTIMARCAS MATRIZ ITU </td>
+                    <td> (11) 5332-2200 </td>
+                </tr>
+                <tr>
+                    <td> 202 </td>
+                    <td> MULTIMARCAS FILIAL SOROCABA </td>
+                    <td> (11) 5332-2200 </td>
+                </tr>
+                <tr>
+                    <td> 203 </td>
+                    <td> MULTIMARCAS FILIAL BOITUVA </td>
+                    <td> (15) 3268-9000 </td>
+                </tr>
+                <tr>
+                    <td> 204 </td>
+                    <td> MULTIMARCAS PIRACICABA </td>
+                    <td> - </td>
+                </tr>
+                <tr>
+                    <td> 205 </td>
+                    <td> MULTIMARCAS PIRASSUNUNGA </td>
+                    <td> - </td>
+                </tr>
+                <tr>
+                    <td> 220 </td>
+                    <td> MAGGI CORRETORA </td>
+                    <td> (11) 4023-0001 </td>
+                </tr>
+                <tr>
+                    <td> 230 </td>
+                    <td> ROTA 67 HARLEY DAVIDSON </td>
+                    <td> (67) 3311-0609 </td>
+                </tr>
+                <tr>
+                    <td> 240 </td>
+                    <td> TRIUMPH CAMPO GRANDE </td>
+                    <td> (67) 3311-0606 </td>
+                </tr>
+                <tr>
+                    <td> 301 </td>
+                    <td> MAGGI MOTORCYCLES </td>
+                    <td> (15) 3141-0400 </td>
+                </tr>
+                <tr>
+                    <td> 302 </td>
+                    <td> MAGGI TRIUMPH - ALPHAVILLE </td>
+                    <td> (11) 3546-8213 </td>
+                </tr>
+                <tr>
+                    <td> 303 </td>
+                    <td> MAGGI TRIUMPH - RIBEIRAO PRETO </td>
+                    <td> (16) 3600-9750 </td>
+                </tr>
+                <tr>
+                    <td> 401 </td>
+                    <td> MAGGI BYD </td>
+                    <td> (15) 3142-8900 </td>
+                </tr>
+                <tr>
+                    <td> 402 </td>
+                    <td> MAGGI BYD - ITU </td>
+                    <td> (11) 5332-2222 </td>
+                </tr>
+                <tr>
+                    <td> 403 </td>
+                    <td> MAGGI BYD - PRES. PRUDENTE </td>
+                    <td> (11) 4013-8101 </td>
+                </tr>
+                <tr>
+                    <td> 404 </td>
+                    <td> MAGGI BYD - ITAPETININGA </td>
+                    <td> - </td>
+                </tr>
+                <tr>
+                    <td> 601 </td>
+                    <td> MAGGI SAN GERMAN - ITAPETININGA</td>
+                    <td> (11) 94809-1353 </td>
+                </tr>
+                <tr>
+                    <td> 701 </td>
+                    <td> MAGGI PASSIONE DUCATI CAMPINAS </td>
+                    <td> - </td>
+                </tr>
+            </table>
+        </main>
+	</body>
+</html>
