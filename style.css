@@ -471,7 +471,7 @@ footer .line-footer p a{
 
     /* Estilo Geral da Página */
     .flex{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     h2.titulo{
@@ -577,12 +577,46 @@ footer .line-footer p a{
     }
 
     /* Estilo Rodapé */
-    footer .flex{
-        flex-direction: column;
+    footer {
+        padding: 5px 4%; /* Reduz o padding */
     }
 
-    .logo-footer:hover{
-        cursor: auto;
-        transform: scale(1.00);
+    footer .flex {
+        flex-direction: row; /* Mantém em linha no mobile */
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px; /* Espaço entre os elementos */
+    }
+
+    footer .line-footer {
+        padding: 10px 0; /* Reduz o padding das linhas */
+    }
+
+    .logo-footer img {
+        height: 30px; /* Reduz o tamanho da logo */
+        width: auto;
+    }
+
+    .btn-social button {
+        width: 35px; /* Botões menores */
+        height: 35px;
+        font-size: 16px;
+    }
+
+    footer .line-footer p {
+        font-size: 12px; /* Texto menor */
+    }
+
+    footer .line-footer p i {
+        font-size: 16px; /* Ícone menor */
+    }
+
+    .footer-desc {
+        font-size: 10px; /* Texto de copyright menor */
+        margin-top: 5px;
+    }
+
+    .borda {
+        border-top: 1px solid #FF00BF; /* Borda mais fina */
     }
 }
